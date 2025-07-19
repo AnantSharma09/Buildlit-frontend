@@ -7,21 +7,25 @@ import { useInView } from "react-intersection-observer";
 const sectionData = [
   {
     title: "The Problem",
-    text: `Finding the right team to build with is hard. Ideas die because there's no one to build with, no one to support them, and no central place to manage it all. AI exists — but no tool helps you actually build.`,
+    text: `Building something great starts with the right team — but finding one is tough.
+           Too many ideas never see the light of day because there's no one to build with, no support system to rely on, and no place that brings everything together.
+           AI is powerful, but most tools leave you building alone.
+           What if your team, your tools, and your momentum all lived in the same space — always on, always ready?`,
   },
   {
     title: "Our Solution",
-    text: `Buildlit brings everything together — people, ideas, and AI — so you can team up, stay aligned, and build faster. One place for everything: finding teammates, planning tasks, chatting, and building with AI support.`,
+    text: `Buildlit brings everything together: people, ideas, and AI — in one powerful platform. Whether you're looking for teammates, planning your roadmap, or building your next big thing, Buildlit keeps your team connected and your vision on track. Plan. Build. Ship. All in one place.`,
   },
   {
     title: "What You Can Do",
-    text: `- Find your team
-- Launch projects
-- Use AI to build faster
-- Collaborate in real-time
-- Join buildathons hosted by startups
-- Create customizable co-working space
-- Participate in contests hosted by BUILDLIT and get on top of the leaderboard`,
+    text: `- Find your team — instantly connect with like-minded builders
+- Launch and manage projects — from idea to execution
+- Use AI to build faster — code, brainstorm, or plan with AI support
+- Collaborate in real-time — chat, share tasks, and stay aligned
+- Join buildathons — hosted by startups and partners
+- Create your own co-working space — customizable and always active
+- Compete in contests — climb the leaderboard and get noticed by the community
+- Promote your startup or profile — Get discovered by the right people: collaborators, investors, or early supporters.`,
   },
 ];
 
