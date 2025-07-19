@@ -30,27 +30,23 @@ const sectionData = [
 ];
 
 const SlideInSection = ({ title, text }: { title: string; text: string }) => {
-  // Use Element to align with useInView callback
   const ref = useRef<Element | null>(null);
-  const { ref: inViewRef, inView } = useInView({ threshold: 0.6 });
+  const { ref: inViewRef, inView } = useInView({ threshold: 0.5 });
   const controls = useAnimation();
 
-  // Merge refs with matching signature: Element | null
   const setRefs = (el: HTMLElement | null) => {
     ref.current = el;
     inViewRef(el);
   };
 
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
+    if (inView) controls.start("visible");
   }, [inView, controls]);
 
   return (
     <motion.section
       ref={setRefs}
-      className="w-screen flex-shrink-0 h-screen flex items-center justify-center px-6 text-center bg-black text-white"
+      className="w-screen h-screen flex items-center justify-center px-6 text-center bg-gradient-to-b from-black via-neutral-900 to-black text-white"
       initial="hidden"
       animate={controls}
       variants={{
@@ -62,16 +58,18 @@ const SlideInSection = ({ title, text }: { title: string; text: string }) => {
         },
       }}
     >
-      <div className="max-w-xl space-y-4">
-        <h2 className="text-4xl font-bold">{title}</h2>
+      <div className="max-w-3xl space-y-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">{title}</h2>
         {title === "What You Can Do" ? (
-          <ul className="text-left text-gray-300 list-disc list-inside space-y-1">
+          <ul className="text-left text-gray-300 list-disc list-inside space-y-1 text-sm sm:text-base md:text-lg">
             {text.split("\n").map((item, idx) => (
               <li key={idx}>{item.replace("- ", "")}</li>
             ))}
           </ul>
         ) : (
-          <p className="text-gray-400">{text}</p>
+          <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed">
+            {text}
+          </p>
         )}
       </div>
     </motion.section>
