@@ -43,8 +43,8 @@ export default function Hero() {
           <span className="underline text-blue-600">Buildlit</span>
         </p>
         <h1 className="text-5xl md:text-6xl font-serif font-medium leading-tight text-gray-900">
-          Ideas are <span className="italic">cheap</span>. Teams are{" "}
-          <span className="italic">rare</span>. We fix that.
+          Ideas are <span className="italic">cheap</span> Teams are{" "}
+          <span className="italic">rare</span> We fix that.
         </h1>
       </div>
     </section>
